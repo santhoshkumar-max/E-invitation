@@ -636,10 +636,10 @@ export const App: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
             aria-label="View RM Mahal on Google Maps"
             title="Open RM Mahal in Google Maps"
-            className="absolute left-1/2 -translate-x-1/2 top-[67.25%] -translate-y-1/2 w-[min(52vw,calc(100vh*0.667*0.52))] h-[min(9vw*1.5,calc(100vh*0.09))] min-w-[240px] max-w-[390px] min-h-[46px] max-h-[76px] rounded-full z-20 cursor-pointer transition-all duration-300 hover:scale-[1.04] active:scale-[0.96] border border-[#fbbf24]/30 hover:border-[#fbbf24] hover:shadow-[0_0_24px_rgba(251,191,36,0.65)] bg-black/10 hover:bg-[#d4af37]/20 group pointer-events-auto"
+            className="absolute left-1/2 -translate-x-1/2 top-[65.56%] -translate-y-1/2 w-[min(32.42vh,86vw)] h-[5.34vh] rounded-full z-20 cursor-pointer transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] border border-transparent hover:border-[#fbbf24]/50 hover:bg-[#fbbf24]/10 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)] group pointer-events-auto"
           >
             <span className="sr-only">View on Google Maps</span>
-            <span className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+            <span className="absolute inset-0 rounded-full overflow-hidden pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
             </span>
           </a>
@@ -667,10 +667,10 @@ export const App: React.FC = () => {
             onClick={(e) => e.stopPropagation()}
             aria-label="View Latha Mahal on Google Maps"
             title="Open Latha Mahal in Google Maps"
-            className="absolute left-1/2 -translate-x-1/2 top-[67.25%] -translate-y-1/2 w-[min(52vw,calc(100vh*0.667*0.52))] h-[min(9vw*1.5,calc(100vh*0.09))] min-w-[240px] max-w-[390px] min-h-[46px] max-h-[76px] rounded-full z-20 cursor-pointer transition-all duration-300 hover:scale-[1.04] active:scale-[0.96] border border-[#fbbf24]/30 hover:border-[#fbbf24] hover:shadow-[0_0_24px_rgba(251,191,36,0.65)] bg-black/10 hover:bg-[#d4af37]/20 group pointer-events-auto"
+            className="absolute left-1/2 -translate-x-1/2 top-[65.56%] -translate-y-1/2 w-[min(32.42vh,86vw)] h-[5.34vh] rounded-full z-20 cursor-pointer transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] border border-transparent hover:border-[#fbbf24]/50 hover:bg-[#fbbf24]/10 hover:shadow-[0_0_24px_rgba(251,191,36,0.5)] group pointer-events-auto"
           >
             <span className="sr-only">View on Google Maps</span>
-            <span className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+            <span className="absolute inset-0 rounded-full overflow-hidden pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
             </span>
           </a>
