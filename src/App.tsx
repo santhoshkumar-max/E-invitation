@@ -614,7 +614,7 @@ export const App: React.FC = () => {
           />
         </div>
 
-        {/* SLIDE 2: Screen 4 (Full edge-to-edge - ZERO top/bottom extra spaces) */}
+        {/* SLIDE 2: Screen 4 (Engagement Ceremony - RM Mahal) */}
         <div className="w-full h-full relative overflow-hidden flex-shrink-0 flex items-center justify-center bg-[#0e0202]">
           <img
             src="/assets/screen4.png"
@@ -624,12 +624,28 @@ export const App: React.FC = () => {
           />
           <img
             src="/assets/screen4.png"
-            alt="Event 2"
+            alt="Engagement Ceremony - RM Mahal"
             className="relative z-10 event-card-img pointer-events-none"
           />
+
+          {/* Interactive Google Maps Button for RM Mahal */}
+          <a
+            href="https://www.google.com/maps/place/RM+Mahal/@9.9159096,78.0960821,17z/data=!3m1!4b1!4m6!3m5!1s0x3b00cf8382cfb0f1:0x50ea67118ea98590!8m2!3d9.9159096!4d78.0960821!16s%2Fg%2F11v9_3c5p5?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            aria-label="View RM Mahal on Google Maps"
+            title="Open RM Mahal in Google Maps"
+            className="absolute left-1/2 -translate-x-1/2 top-[67.25%] -translate-y-1/2 w-[min(52vw,calc(100vh*0.667*0.52))] h-[min(9vw*1.5,calc(100vh*0.09))] min-w-[240px] max-w-[390px] min-h-[46px] max-h-[76px] rounded-full z-20 cursor-pointer transition-all duration-300 hover:scale-[1.04] active:scale-[0.96] border border-[#fbbf24]/30 hover:border-[#fbbf24] hover:shadow-[0_0_24px_rgba(251,191,36,0.65)] bg-black/10 hover:bg-[#d4af37]/20 group pointer-events-auto"
+          >
+            <span className="sr-only">View on Google Maps</span>
+            <span className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+            </span>
+          </a>
         </div>
 
-        {/* SLIDE 3: Screen 5 (Full edge-to-edge - ZERO top/bottom extra spaces) */}
+        {/* SLIDE 3: Screen 5 (Wedding Ceremony - Latha Mahal) */}
         <div className="w-full h-full relative overflow-hidden flex-shrink-0 flex items-center justify-center bg-[#0e0202]">
           <img
             src="/assets/screen5.png"
@@ -639,9 +655,25 @@ export const App: React.FC = () => {
           />
           <img
             src="/assets/screen5.png"
-            alt="Event 3"
+            alt="Wedding Ceremony - Latha Mahal"
             className="relative z-10 event-card-img pointer-events-none"
           />
+
+          {/* Interactive Google Maps Button for Latha Mahal */}
+          <a
+            href="https://www.google.com/maps/place/Latha+Mahal+A%2FC/@10.036713,78.3305832,17z/data=!3m1!4b1!4m6!3m5!1s0x3b00eb0056b49fff:0x9c609628b89bc801!8m2!3d10.036713!4d78.3305832!16s%2Fg%2F11y35mlgjw?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            aria-label="View Latha Mahal on Google Maps"
+            title="Open Latha Mahal in Google Maps"
+            className="absolute left-1/2 -translate-x-1/2 top-[67.25%] -translate-y-1/2 w-[min(52vw,calc(100vh*0.667*0.52))] h-[min(9vw*1.5,calc(100vh*0.09))] min-w-[240px] max-w-[390px] min-h-[46px] max-h-[76px] rounded-full z-20 cursor-pointer transition-all duration-300 hover:scale-[1.04] active:scale-[0.96] border border-[#fbbf24]/30 hover:border-[#fbbf24] hover:shadow-[0_0_24px_rgba(251,191,36,0.65)] bg-black/10 hover:bg-[#d4af37]/20 group pointer-events-auto"
+          >
+            <span className="sr-only">View on Google Maps</span>
+            <span className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+            </span>
+          </a>
         </div>
       </div>
 
