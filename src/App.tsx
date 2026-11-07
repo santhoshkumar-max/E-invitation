@@ -549,7 +549,7 @@ export const App: React.FC = () => {
                 <img
                   src="/assets/logo-transparent.png"
                   alt="Monogram"
-                  className="w-20 sm:w-28 md:w-36 h-auto object-contain mb-3 sm:mb-5 drop-shadow-[0_4px_24px_rgba(212,175,55,0.75)] pointer-events-none"
+                  className="w-12 sm:w-16 md:w-20 h-auto object-contain mb-2 sm:mb-3 drop-shadow-[0_4px_16px_rgba(212,175,55,0.7)] pointer-events-none"
                 />
 
                 <h1 className="font-['Outfit',sans-serif] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-[0.05em] text-gold-shimmer drop-shadow-[0_8px_40px_rgba(212,175,55,0.9)] leading-tight">
