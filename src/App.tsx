@@ -537,10 +537,10 @@ export const App: React.FC = () => {
         <div className="w-full h-full relative overflow-hidden flex-shrink-0">
           <Scene scrollProgress={entranceProgress} />
 
-          {/* Screen 1 Intro Animation Text: "The Beginning of Forever" */}
+          {/* Screen 1 Intro Animation Text: "The Beginning of Forever" positioned lower down */}
           {showIntroText && (
             <div
-              className={`absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-700 ${
+              className={`absolute inset-0 z-20 flex flex-col items-center justify-end pb-16 sm:pb-24 md:pb-28 pointer-events-none transition-opacity duration-700 ${
                 entranceProgress > 0.05 || screen > 1 ? 'opacity-0' : 'opacity-100'
               }`}
             >
