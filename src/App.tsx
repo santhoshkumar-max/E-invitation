@@ -545,6 +545,13 @@ export const App: React.FC = () => {
               }`}
             >
               <div className="animate-intro-text flex flex-col items-center text-center px-6">
+                {/* Isolated Transparent Gold Monogram Logo */}
+                <img
+                  src="/assets/logo-transparent.png"
+                  alt="Monogram"
+                  className="w-20 sm:w-28 md:w-36 h-auto object-contain mb-3 sm:mb-5 drop-shadow-[0_4px_24px_rgba(212,175,55,0.75)] pointer-events-none"
+                />
+
                 <h1 className="font-['Outfit',sans-serif] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-[0.05em] text-gold-shimmer drop-shadow-[0_8px_40px_rgba(212,175,55,0.9)] leading-tight">
                   The Beginning of Forever
                 </h1>
