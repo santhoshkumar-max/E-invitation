@@ -545,13 +545,13 @@ export const App: React.FC = () => {
               }`}
             >
               <div className="animate-intro-text flex flex-col items-center text-center px-6">
-                <h1 className="font-['Outfit',sans-serif] text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-[0.06em] text-gold-shimmer drop-shadow-[0_6px_36px_rgba(212,175,55,0.9)] leading-tight">
+                <h1 className="font-['Outfit',sans-serif] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-[0.05em] text-gold-shimmer drop-shadow-[0_8px_40px_rgba(212,175,55,0.9)] leading-tight">
                   The Beginning of Forever
                 </h1>
-                <div className="mt-3 sm:mt-5 flex items-center justify-center gap-3">
-                  <span className="w-14 sm:w-24 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24] to-[#d4af37]" />
-                  <span className="text-[#fbbf24] text-xs opacity-90">✦</span>
-                  <span className="w-14 sm:w-24 h-[1px] bg-gradient-to-l from-transparent via-[#fbbf24] to-[#d4af37]" />
+                <div className="mt-4 sm:mt-6 flex items-center justify-center gap-3.5">
+                  <span className="w-16 sm:w-28 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24] to-[#d4af37]" />
+                  <span className="text-[#fbbf24] text-sm opacity-90">✦</span>
+                  <span className="w-16 sm:w-28 h-[1px] bg-gradient-to-l from-transparent via-[#fbbf24] to-[#d4af37]" />
                 </div>
               </div>
             </div>
