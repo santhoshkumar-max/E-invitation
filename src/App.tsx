@@ -552,7 +552,7 @@ export const App: React.FC = () => {
                   className="w-12 sm:w-16 md:w-20 h-auto object-contain mb-2 sm:mb-3 drop-shadow-[0_4px_16px_rgba(212,175,55,0.7)] pointer-events-none"
                 />
 
-                <h1 className="font-['Alex_Brush',cursive] text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-normal tracking-wide text-gold-shimmer drop-shadow-[0_8px_36px_rgba(212,175,55,0.85)] leading-tight py-1">
+                <h1 className="font-['Outfit',sans-serif] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-[0.05em] text-gold-shimmer drop-shadow-[0_8px_40px_rgba(212,175,55,0.9)] leading-tight">
                   The Beginning of Forever
                 </h1>
                 <div className="mt-4 sm:mt-6 flex items-center justify-center gap-3.5">
