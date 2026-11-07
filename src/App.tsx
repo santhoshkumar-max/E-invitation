@@ -542,7 +542,7 @@ export const App: React.FC = () => {
           {/* Screen 1 Intro Animation Text: "The Beginning of Forever" positioned lower down */}
           {showIntroText && (
             <div
-              className={`absolute inset-0 z-20 flex flex-col items-center justify-end pb-16 sm:pb-24 md:pb-28 pointer-events-none transition-opacity duration-700 ${
+              className={`absolute inset-0 z-20 flex flex-col items-center justify-end pb-12 sm:pb-16 md:pb-20 pointer-events-none transition-opacity duration-700 ${
                 entranceProgress > 0.05 || screen > 1 ? 'opacity-0' : 'opacity-100'
               }`}
             >
@@ -551,16 +551,16 @@ export const App: React.FC = () => {
                 <img
                   src="/assets/logo-transparent.png"
                   alt="Monogram"
-                  className="w-12 sm:w-16 md:w-20 h-auto object-contain mb-2 sm:mb-3 drop-shadow-[0_4px_16px_rgba(212,175,55,0.7)] pointer-events-none"
+                  className="w-12 sm:w-16 md:w-20 h-auto object-contain mb-1.5 sm:mb-2 translate-y-1 sm:translate-y-1.5 drop-shadow-[0_4px_16px_rgba(212,175,55,0.7)] pointer-events-none"
                 />
 
-                <h1 className="font-['Outfit',sans-serif] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-[0.05em] text-gold-shimmer drop-shadow-[0_8px_40px_rgba(212,175,55,0.9)] leading-tight">
+                <h1 className="font-['Outfit',sans-serif] text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[0.05em] text-gold-shimmer drop-shadow-[0_6px_32px_rgba(212,175,55,0.85)] leading-tight">
                   The Beginning of Forever
                 </h1>
-                <div className="mt-4 sm:mt-6 flex items-center justify-center gap-3.5">
-                  <span className="w-16 sm:w-28 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24] to-[#d4af37]" />
-                  <span className="text-[#fbbf24] text-sm opacity-90">✦</span>
-                  <span className="w-16 sm:w-28 h-[1px] bg-gradient-to-l from-transparent via-[#fbbf24] to-[#d4af37]" />
+                <div className="mt-3 sm:mt-4 flex items-center justify-center gap-3">
+                  <span className="w-14 sm:w-24 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24] to-[#d4af37]" />
+                  <span className="text-[#fbbf24] text-xs sm:text-sm opacity-90">✦</span>
+                  <span className="w-14 sm:w-24 h-[1px] bg-gradient-to-l from-transparent via-[#fbbf24] to-[#d4af37]" />
                 </div>
               </div>
             </div>
