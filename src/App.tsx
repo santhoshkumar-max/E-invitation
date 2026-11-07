@@ -275,6 +275,11 @@ export const App: React.FC = () => {
     };
 
     const handleTouchMove = (e: TouchEvent) => {
+      // Prevent mobile browser from triggering native pull-to-refresh reload
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+
       const currentY = e.touches[0].clientY;
       const diffY = touchStartYRef.current - currentY;
       const currentScreen = screenRef.current;
@@ -423,7 +428,7 @@ export const App: React.FC = () => {
   const deckTranslatePercent = Math.max(0, screen - 2) * 100;
 
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#0a080c] select-none text-white font-serif">
+    <div className="fixed inset-0 w-full h-full overflow-hidden bg-[#0a080c] select-none text-white font-serif touch-none overscroll-none">
       {/* Clean asset preloader */}
       <Preloader />
 
