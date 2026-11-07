@@ -16,11 +16,13 @@ export const App: React.FC = () => {
 
   // Screen 1 Intro Animation Text ("The Beginning of Forever"): appears on load, stays ~7s, dissolves away
   const [showIntroText, setShowIntroText] = useState(true);
+  const [showScrollPrompt, setShowScrollPrompt] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntroText(false);
-    }, 7800);
+      setShowScrollPrompt(true);
+    }, 7400);
     return () => clearTimeout(timer);
   }, []);
 
@@ -560,6 +562,38 @@ export const App: React.FC = () => {
                   <span className="text-[#fbbf24] text-sm opacity-90">✦</span>
                   <span className="w-16 sm:w-28 h-[1px] bg-gradient-to-l from-transparent via-[#fbbf24] to-[#d4af37]" />
                 </div>
+              </div>
+            </div>
+          )}
+
+          {/* "Scroll Up" Guide: Appears after intro text and logo are gone */}
+          {showScrollPrompt && (
+            <div
+              className={`absolute inset-0 z-20 flex flex-col items-center justify-end pb-12 sm:pb-16 pointer-events-none transition-opacity duration-700 animate-[fadeIn_0.8s_ease-out_forwards] ${
+                entranceProgress > 0.05 || screen > 1 ? 'opacity-0' : 'opacity-100'
+              }`}
+            >
+              <div className="flex flex-col items-center gap-2 text-center">
+                {/* Animated gentle bouncing upward chevron */}
+                <div className="animate-bounce flex flex-col items-center text-[#fbbf24]">
+                  <svg
+                    className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-[0_2px_8px_rgba(251,191,36,0.85)]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="18 15 12 9 6 15" />
+                  </svg>
+                </div>
+
+                <span className="font-['Outfit',sans-serif] text-sm sm:text-base tracking-[0.25em] uppercase font-medium text-gold-shimmer drop-shadow-[0_2px_12px_rgba(212,175,55,0.85)]">
+                  Scroll Up
+                </span>
+
+                <span className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24]/60 to-transparent" />
               </div>
             </div>
           )}
