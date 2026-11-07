@@ -80,19 +80,19 @@ html, body, #root {
   50% { height: 12px; }
 }
 
-/* Screen 1 Intro Text Animation: Zooms in, stays for 2 seconds, dissolves away */
+/* Screen 1 Intro Text Animation: Zooms in, stays for ~5 seconds, dissolves away */
 @keyframes introZoomInOut {
   0% {
     opacity: 0;
     transform: scale(0.7);
     filter: blur(8px);
   }
-  22% {
+  14% {
     opacity: 1;
     transform: scale(1);
     filter: blur(0px);
   }
-  78% {
+  86% {
     opacity: 1;
     transform: scale(1.03);
     filter: blur(0px);
@@ -106,7 +106,7 @@ html, body, #root {
 }
 
 .animate-intro-text {
-  animation: introZoomInOut 3.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: introZoomInOut 5.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* 

@@ -14,13 +14,13 @@ export const App: React.FC = () => {
   // Screen 1 Entrance Progress: 0.0 (closed) to 1.0 (fully open)
   const [entranceProgress, setEntranceProgress] = useState(0);
 
-  // Screen 1 Intro Animation Text ("The Beginning of Forever"): appears on load, stays ~2s, dissolves away
+  // Screen 1 Intro Animation Text ("The Beginning of Forever"): appears on load, stays ~5s, dissolves away
   const [showIntroText, setShowIntroText] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntroText(false);
-    }, 4000);
+    }, 6000);
     return () => clearTimeout(timer);
   }, []);
 
