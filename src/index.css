@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #080506;
+    color: #fff;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080506;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f7d070;
+}
+
+/* Gold shimmer animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f7e09e 0%, #d4af37 50%, #aa820a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #d4af37 0%, #fff6d6 50%, #d4af37 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 4s infinite linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Equalizer music bars animation */
+@keyframes musicBar1 {
+  0%, 100% { height: 4px; }
+  50% { height: 14px; }
+}
+@keyframes musicBar2 {
+  0%, 100% { height: 14px; }
+  50% { height: 6px; }
+}
+@keyframes musicBar3 {
+  0%, 100% { height: 7px; }
+  50% { height: 12px; }
+}
+
+/* 
+ * Full-bleed Event Cards for Screens 3, 4, 5:
+ * On portrait/mobile viewports (aspect ratio < 2/3), uses object-fit: cover
+ * so the card fills 100% of the screen height, completely eliminating
+ * all top and bottom extra spaces/black bars!
+ * On landscape/desktop viewports (aspect ratio >= 2/3), uses object-fit: contain
+ * so the card height is 100% of the screen with zero top/bottom gaps.
+ */
+.event-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-aspect-ratio: 2/3) {
+  .event-card-img {
+    object-fit: contain;
+    object-position: center;
+  }
+}
