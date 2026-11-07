@@ -14,6 +14,16 @@ export const App: React.FC = () => {
   // Screen 1 Entrance Progress: 0.0 (closed) to 1.0 (fully open)
   const [entranceProgress, setEntranceProgress] = useState(0);
 
+  // Screen 1 Intro Animation Text ("The Beginning of Forever"): appears on load, stays ~2s, dissolves away
+  const [showIntroText, setShowIntroText] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntroText(false);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Audio background music state:
   // Default: NOT muted (sound enabled by default).
   // Plays on load, user can click to mute at any time.
@@ -526,6 +536,26 @@ export const App: React.FC = () => {
         {/* SLIDE 0: Screen 1 (Entrance) & Screen 2 (Courtyard) */}
         <div className="w-full h-full relative overflow-hidden flex-shrink-0">
           <Scene scrollProgress={entranceProgress} />
+
+          {/* Screen 1 Intro Animation Text: "The Beginning of Forever" */}
+          {showIntroText && (
+            <div
+              className={`absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none transition-opacity duration-700 ${
+                entranceProgress > 0.05 || screen > 1 ? 'opacity-0' : 'opacity-100'
+              }`}
+            >
+              <div className="animate-intro-text flex flex-col items-center text-center px-6">
+                <h1 className="font-['Cinzel'] text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-gold-shimmer drop-shadow-[0_4px_30px_rgba(212,175,55,0.85)] leading-tight">
+                  The Beginning of Forever
+                </h1>
+                <div className="mt-3 sm:mt-4 flex items-center justify-center gap-2.5">
+                  <span className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]" />
+                  <span className="text-[#fbbf24] text-xs">❖</span>
+                  <span className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]" />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* SLIDE 1: Screen 3 (Full edge-to-edge - ZERO top/bottom extra spaces) */}
