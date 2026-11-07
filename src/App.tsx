@@ -14,13 +14,13 @@ export const App: React.FC = () => {
   // Screen 1 Entrance Progress: 0.0 (closed) to 1.0 (fully open)
   const [entranceProgress, setEntranceProgress] = useState(0);
 
-  // Screen 1 Intro Animation Text ("The Beginning of Forever"): appears on load, stays ~5s, dissolves away
+  // Screen 1 Intro Animation Text ("The Beginning of Forever"): appears on load, stays ~7s, dissolves away
   const [showIntroText, setShowIntroText] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntroText(false);
-    }, 6000);
+    }, 7800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -545,13 +545,13 @@ export const App: React.FC = () => {
               }`}
             >
               <div className="animate-intro-text flex flex-col items-center text-center px-6">
-                <h1 className="font-['Cinzel'] text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-gold-shimmer drop-shadow-[0_4px_30px_rgba(212,175,55,0.85)] leading-tight">
+                <h1 className="font-['Outfit',sans-serif] text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-[0.06em] text-gold-shimmer drop-shadow-[0_6px_36px_rgba(212,175,55,0.9)] leading-tight">
                   The Beginning of Forever
                 </h1>
-                <div className="mt-3 sm:mt-4 flex items-center justify-center gap-2.5">
-                  <span className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]" />
-                  <span className="text-[#fbbf24] text-xs">❖</span>
-                  <span className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]" />
+                <div className="mt-3 sm:mt-5 flex items-center justify-center gap-3">
+                  <span className="w-14 sm:w-24 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24] to-[#d4af37]" />
+                  <span className="text-[#fbbf24] text-xs opacity-90">✦</span>
+                  <span className="w-14 sm:w-24 h-[1px] bg-gradient-to-l from-transparent via-[#fbbf24] to-[#d4af37]" />
                 </div>
               </div>
             </div>
