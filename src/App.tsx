@@ -566,37 +566,6 @@ export const App: React.FC = () => {
             </div>
           )}
 
-          {/* "Scroll Up" Guide: Appears after intro text and logo are gone */}
-          {showScrollPrompt && (
-            <div
-              className={`absolute inset-0 z-20 flex flex-col items-center justify-end pb-12 sm:pb-16 pointer-events-none transition-opacity duration-700 animate-[fadeIn_0.8s_ease-out_forwards] ${
-                entranceProgress > 0.05 || screen > 1 ? 'opacity-0' : 'opacity-100'
-              }`}
-            >
-              <div className="flex flex-col items-center gap-2 text-center">
-                {/* Animated gentle bouncing upward chevron */}
-                <div className="animate-bounce flex flex-col items-center text-[#fbbf24]">
-                  <svg
-                    className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-[0_2px_8px_rgba(251,191,36,0.85)]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="18 15 12 9 6 15" />
-                  </svg>
-                </div>
-
-                <span className="font-['Outfit',sans-serif] text-sm sm:text-base tracking-[0.25em] uppercase font-medium text-gold-shimmer drop-shadow-[0_2px_12px_rgba(212,175,55,0.85)]">
-                  Scroll Up
-                </span>
-
-                <span className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24]/60 to-transparent" />
-              </div>
-            </div>
-          )}
         </div>
 
         {/* SLIDE 1: Screen 3 (Full edge-to-edge - ZERO top/bottom extra spaces) */}
@@ -676,6 +645,36 @@ export const App: React.FC = () => {
           </a>
         </div>
       </div>
+
+        {/* "Scroll Up" Guide: stays fixed on every screen */}
+        {showScrollPrompt && (
+          <div
+            className={`fixed inset-0 z-20 flex flex-col items-center justify-end pb-12 sm:pb-16 pointer-events-none animate-[fadeIn_0.8s_ease-out_forwards]`}
+          >
+            <div className="flex flex-col items-center gap-2 text-center">
+              {/* Animated gentle bouncing upward chevron */}
+              <div className="animate-bounce flex flex-col items-center text-[#fbbf24]">
+                <svg
+                  className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-[0_2px_8px_rgba(251,191,36,0.85)]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="18 15 12 9 6 15" />
+                </svg>
+              </div>
+
+              <span className="font-['Outfit',sans-serif] text-sm sm:text-base tracking-[0.25em] uppercase font-medium text-gold-shimmer drop-shadow-[0_2px_12px_rgba(212,175,55,0.85)]">
+                Scroll Up
+              </span>
+
+              <span className="w-12 h-[1px] bg-gradient-to-r from-transparent via-[#fbbf24]/60 to-transparent" />
+            </div>
+          </div>
+        )}
 
       {/* Discreet Luxury Floating Right Dots (No black buttons, clean 6px gold dots) */}
       <div className="fixed right-3 sm:right-5 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-3 pointer-events-auto">
